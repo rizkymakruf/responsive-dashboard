@@ -1,16 +1,10 @@
-import React from "react";
 import Image from "next/image";
 import ProfilePic from "../public/pp1.png";
 
-const Sidebar = () => {
-  const [menu, setMenu] = React.useState("");
+const Sidebar = (props) => {
+  const { menu } = props.globalCtx;
+  const { setMenu } = props.globalAct;
 
-  const onClick = React.useCallback(
-    (m) => () => {
-      setMenu(m);
-    },
-    [menu]
-  );
   return (
     <div className="w-3/12 bg-gray-500 h-screen fixed left-0">
       <div className="w-full flex flex-col justify-center">
@@ -52,9 +46,9 @@ const Sidebar = () => {
         <div className="w-full px-5 md:px-10">
           <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
-              menu === "dashboard" ? "bg-white/40" : ""
+              props.menu === "dashboard" ? "bg-white/40" : ""
             } duration-200 rounded-xl`}
-            onClick={onClick("dashboard")}
+            onClick={setMenu("dashboard")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +65,7 @@ const Sidebar = () => {
             </svg>
             <p className="text-white hidden md:block">Dashboard</p>
           </div>
-          <div
+          {/* <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
               menu === "folders" ? "bg-white/40" : ""
             } duration-200 rounded-xl`}
@@ -126,7 +120,7 @@ const Sidebar = () => {
               />
             </svg>
             <p className="text-white hidden md:block">Settings</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

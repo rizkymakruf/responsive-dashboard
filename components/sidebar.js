@@ -9,10 +9,10 @@ const Sidebar = (props) => {
   const { setMenu } = props.globalAct;
 
   return (
-    <div className="w-3/12 bg-gray-500 h-screen fixed left-0">
+    <div className="w-3/12 h-full bg-gray-500 fixed left-0">
       <div className="w-full flex flex-col justify-center">
         {/* name app  */}
-        <div className="flex gap-2 items-center justify-center py-8 px-10">
+        <div className="flex flex-col md:flex-row gap-2 items-center justify-center py-8 px-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -29,14 +29,14 @@ const Sidebar = (props) => {
         </div>
         {/* profile pic */}
         <div className="flex flex-col justify-center items-center px-10 pt-5 pb-16 space-y-2">
-          <div className="w-32 h-32 rounded-full bg-white relative">
+          <div className="w-14 md:w-32 h-14 md:h-32 rounded-full bg-white relative">
             <Image
               src={ProfilePic}
               className={"rounded-full"}
               alt={"profile"}
               priority
             />
-            <div className="w-8 h-8 bg-black/90 rounded-full flex justify-center items-center absolute bottom-1 right-1">
+            <div className="w-4 md:w-8 h-4 md:h-8 bg-black/90 rounded-full flex justify-center items-center absolute bottom-1 right-0 md:right-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -48,14 +48,16 @@ const Sidebar = (props) => {
               </svg>
             </div>
           </div>
-          <p className="text-white text-lg">Jennifer Sanss</p>
+          <p className="text-white text-md text-center md:text-lg">
+            Jennifer Sanss
+          </p>
         </div>
         {/* list menu */}
-        <div className="w-full px-5 md:px-10">
+        <div className="w-full px-5 md:px-10 space-y-3">
           <div
-            className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
+            className={`flex md:gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
               globalCtx.menu === "dashboard" ? "bg-white/40" : ""
-            } duration-200 rounded-xl`}
+            } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("dashboard")}
           >
             <svg
@@ -76,7 +78,7 @@ const Sidebar = (props) => {
           <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
               globalCtx.menu === "folders" ? "bg-white/40" : ""
-            } duration-200 rounded-xl`}
+            } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("folders")}
           >
             <svg
@@ -92,7 +94,7 @@ const Sidebar = (props) => {
           <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
               globalCtx.menu === "favorites" ? "bg-white/40" : ""
-            } duration-200 rounded-xl`}
+            } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("favorites")}
           >
             <svg
@@ -112,7 +114,7 @@ const Sidebar = (props) => {
           <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
               globalCtx.menu === "settings" ? "bg-white/40" : ""
-            } duration-200 rounded-xl`}
+            } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("settings")}
           >
             <svg

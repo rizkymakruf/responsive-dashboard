@@ -7,9 +7,9 @@ import TopBar from "../components/topbar";
 
 export default function Home(props) {
   const { globalAct, globalCtx } = useContext(GlobalContext);
-  useEffect(() => {
-    // globalAct.setMenu(props.menu);
-  }, []);
+  // useEffect(() => {
+  //   // globalAct.setMenu(props.menu);
+  // }, []);
   console.log("menu", globalCtx.menu);
   return (
     <div className="w-full flex">

@@ -56,7 +56,7 @@ const Sidebar = (props) => {
         <div className="w-full px-5 md:px-10 space-y-3">
           <div
             className={`flex md:gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
-              globalCtx.menu === "dashboard" ? "bg-white/40" : ""
+              globalCtx.menu === "dashboard" ? "bg-white/30" : ""
             } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("dashboard")}
           >
@@ -77,7 +77,7 @@ const Sidebar = (props) => {
           </div>
           <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
-              globalCtx.menu === "folders" ? "bg-white/40" : ""
+              globalCtx.menu === "folders" ? "bg-white/30" : ""
             } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("folders")}
           >
@@ -93,7 +93,7 @@ const Sidebar = (props) => {
           </div>
           <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
-              globalCtx.menu === "favorites" ? "bg-white/40" : ""
+              globalCtx.menu === "favorites" ? "bg-white/30" : ""
             } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("favorites")}
           >
@@ -113,7 +113,7 @@ const Sidebar = (props) => {
           </div>
           <div
             className={`flex gap-2 items-center px-3 py-3 cursor-pointer justify-center md:justify-start ${
-              globalCtx.menu === "settings" ? "bg-white/40" : ""
+              globalCtx.menu === "settings" ? "bg-white/30" : ""
             } duration-200 rounded-full md:rounded-xl`}
             onClick={() => setMenu("settings")}
           >

@@ -1,13 +1,52 @@
 const TopBar = () => {
   return (
-    <div className="w-full pb-8 flex justify-around">
-      <div className="w-2/6 flex items-center gap-2">
+    <div className="w-full pb-8 flex flex-col md:flex-row md:justify-around">
+      <div className="w-full md:w-2/6 md:hidden flex gap-3 items-center justify-between">
+        <div className="flex gap-3">
+          <div className="py-1 px-1 rounded-lg bordered border-2 flex justify-center items-center border-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-4 h-4 text-gray-400"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+              />
+            </svg>
+          </div>
+          <div className="py-1 px-1 rounded-lg bordered border-2 flex justify-center items-center border-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-4 h-4 text-gray-400"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+              />
+            </svg>
+          </div>
+        </div>
+        <div className="px-3 py-1 text-white text-xs bg-green-700/50 flex justify-center font-semibold rounded-lg">
+          Upgrade your plane
+        </div>
+      </div>
+      <div className="w-full md:w-2/6 flex items-center py-4 md:py-0 gap-2">
         <p className="text-2xl">Overview</p>
         <div className="bg-red-500 text-white rounded-full text-xs flex justify-center items-center px-2">
           182GB
         </div>
       </div>
-      <div className="w-2/6 gap-1 pr-2 flex items-center">
+      <div className="w-full md:w-2/6 gap-1 pr-2 flex items-center">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +66,8 @@ const TopBar = () => {
           placeholder="Search someting..."
         ></input>
       </div>
-      <div className="w-2/6 flex gap-3 items-center">
-        <div className="py-1 px-1 rounded-lg bordered border-2 flex justify-center items-center border-gray-400">
+      <div className="w-full md:w-2/6 md:flex gap-3 items-center hidden">
+        <div className="py-1 px-1 rounded-lg bordered border-2 flex justify-center items-center border-gray-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -44,7 +83,7 @@ const TopBar = () => {
             />
           </svg>
         </div>
-        <div className="py-1 px-1 rounded-lg bordered border-2 flex justify-center items-center border-gray-400">
+        <div className="py-1 px-1 rounded-lg bordered border-2 flex justify-center items-center border-gray-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -60,7 +99,7 @@ const TopBar = () => {
             />
           </svg>
         </div>
-        <div className="w-full py-1 text-white bg-green-700/50 flex justify-center font-semibold rounded-lg">
+        <div className="w-full px-2 py-1 text-white bg-green-700/50 flex justify-center font-semibold rounded-lg cursor-pointer">
           Upgrade your plane
         </div>
       </div>

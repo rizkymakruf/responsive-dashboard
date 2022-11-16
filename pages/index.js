@@ -12,12 +12,12 @@ export default function Home(props) {
   // }, []);
   console.log("menu", globalCtx.menu);
   return (
-    <div className="w-full flex">
+    <div className="w-full relative">
       <Sidebar globalAct={globalAct} globalCtx={globalCtx} />
-      <div className="w-9/12 bg-gray-100 fixed right-0 p-5">
+      <div className="w-9/12 bg-gray-100 absolute right-0  p-5">
         <TopBar />
         {globalCtx.menu === "dashboard" ? (
-          <div className="w-full">
+          <div className="w-full duration-300">
             <Dashboard />
           </div>
         ) : (

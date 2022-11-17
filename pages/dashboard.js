@@ -12,7 +12,7 @@ const Dashboard = () => {
         </div>
         <div className="w-7/12 flex relative bg-gray-500">
           <div className="overflow-x-scroll flex">
-            <div className="flex-none">
+            <div className="flex-none w-32 bg-black">
               <div className="flex flex-col space-y-2">
                 <div className="w-12 h-12 rounded-full bg-yellow-600"></div>
                 <p className="text-white">name</p>

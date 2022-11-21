@@ -12,8 +12,13 @@ const Dashboard = () => {
         </div>
         <div className="w-7/12 flex relative px-2">
           <div className="overflow-x-scroll overflow-auto flex gap-5">
-            <div className="flex flex-none justify-center relative items-center w-32 bg-green-700/50 rounded-lg">
-              <p className="text-white absolute top-0">name</p>
+            <div className="flex flex-none justify-center relative items-center w-32 bg-green-700/50 rounded-xl">
+              <div className="absolute w-full top-0">
+                <div className="w-full flex justify-between items-center py-3 px-5">
+                  <p className="text-white">01</p>
+                  <p className="text-white">:</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
